@@ -1,0 +1,23 @@
+syntax="proto3";
+
+
+// 生成go文件处在那个目录哪个包，service：包名
+// .代表当前目录
+option go_package =".;service";
+
+
+
+// 定义一个服务，服务中有一个方法，接收客户端参数和返回服务端响应
+//
+service SayHello{
+  rpc SayHello(HelloRequest) returns (HelloResponse){}
+}
+
+// message:类似golang中的结构体
+// ”赋值“ 这里是定义这个变量这这个message中的位置
+message HelloRequest{
+  string requestName = 1;
+}
+message HelloResponse{
+  string responseMsg=1;
+}

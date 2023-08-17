@@ -8,19 +8,19 @@ package pool
 
 // go get -u github.com/panjf2000/ants/v2
 
-func ants_learn() {
-	// 创建默认的协程池
-	pool, err := ants.NewPool(10) // 10 是协程池的容量
-
-	// 创建带有自定义任务函数的协程池
-	poolfunc, err := ants.NewPoolWithFunc(10, func(task interface{}) {
-		// 处理任务的逻辑
-	})
-	//使用 Submit() 方法将任务提交给协程池
-	err := pool.Submit(func() {
-		// 处理任务的逻辑
-	})
-	// 关闭协程池
-	defer pool.Release()
-
-}
+//func ants_learn() {
+//	// 创建默认的协程池
+//	pool, err := ants.NewPool(10) // 10 是协程池的容量
+//
+//	// 创建带有自定义任务函数的协程池
+//	poolfunc, err := ants.NewPoolWithFunc(10, func(task interface{}) {
+//		// 处理任务的逻辑
+//	})
+//	//使用 Submit() 方法将任务提交给协程池
+//	err := pool.Submit(func() {
+//		// 处理任务的逻辑
+//	})
+//	// 关闭协程池
+//	defer pool.Release()
+//
+//}
